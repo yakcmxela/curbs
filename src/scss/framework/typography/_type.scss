@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: inherit;
+	font-family: $font-family-headline;
+	font-weight: $font-weight-headline;
+	line-height: normal;
+	margin: 0 0 1rem;
+	word-wrap: break-word;
+}
+p {
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+blockquote {
+	padding: 0;
+	margin: 0 0 1rem;
+}
+table {
+	margin: 0 auto 1rem;
+	width: 100%;
+}
+
+ol, ul {
+	margin: 0 0 1rem 2rem;
+	padding: 0;
+
+	ol, ul {
+		margin-bottom: 0;
+	}
+
+	nav & {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+address {
+	font-style: normal;
+	margin: 0 0 1rem;
+}
+[hidden] {
+	display: none !important;
+}

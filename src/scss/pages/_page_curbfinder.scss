@@ -1,0 +1,354 @@
+.page-template-page_curbfinder {
+	h1 {
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	.curbfinder {
+		display: flex;
+		flex-wrap: wrap;
+		.form-section {
+			width: 50%;
+			margin: 2rem 0;
+			display: flex;
+			flex-direction: column;
+			&:last-of-type {
+				width: 100%;
+			}
+			@media(max-width: $phablet) {
+				width: 100%;
+			}
+		}
+		#current {
+			padding-right: 3rem;
+			@media(max-width: $phablet) {
+				padding-right: 0;
+			}
+		}
+		#new {
+			padding-left: 3rem;
+			@media(max-width: $phablet) {
+				padding-left: 0;
+			}
+		}
+		#notes-old,
+		#notes-new,
+		#part-number-old,
+		#part-number-new {
+		}
+		#verify {
+			height: auto;
+			max-height: 5000px;
+			transition: all .3s ease-in;
+			position: relative;
+			&.transition-out {
+				max-height: 1000px;
+			}
+			&.transition-in {
+				max-height: 10000px;
+			}
+			.step-heading {
+				margin-bottom: 0;
+			}
+			.loading-icon {
+				opacity: 0;
+				visibility: hidden;
+				&.active {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			.adapter-info {
+				margin-top: -64px;
+				margin-bottom: 32px;
+				text-align: left;
+				opacity: 1;
+				transform: translateX(0px);
+				visibility: visible;
+				transition: all .3s ease-in;
+				&.transition-out {
+					transform: translateX(100px);
+					opacity: 0;
+					visibility: hidden;
+				}
+				&.transition-in {
+					transform: translateX(-100px);
+					transition: 0s;
+					opacity: 0;
+					visibility: hidden;
+				}
+				.no-curb {
+					.info {
+						width: 60%;
+					}
+					.diagrams {
+						.diagram {
+							width: auto;
+						}
+					}
+					.contact-url {
+						text-decoration: underline;
+					}
+				}
+			}
+			#dummy {
+				position: absolute;
+				visibility: hidden;
+				opacity: 0;
+			}
+			.fill-in {
+				transition: all .2s linear;
+				&.fade-out {
+					opacity: 0;
+					transform: translateY(-12px);
+				}
+			}
+			.no-curbs {
+				margin-top: 0;
+			}
+		}
+		h3 {
+			text-transform: uppercase;
+			margin: .5rem 0;
+		}
+		label {
+			color: #6a6d67;
+			font-size: .75em;
+			font-weight: 500;
+			text-transform: uppercase;
+			font-family: $font-family-headline;
+			margin-top: 1rem;
+			margin-bottom: .5rem;
+			&:first-of-type {
+				margin-top: 2rem;
+			}
+		}
+		input,
+		textarea {
+			font-family: $font-family-base;
+			background-color: #eee;
+		}
+		.step {
+			position: relative;
+			background-color: $brand-orange;
+			border-radius: 100%;
+			width: 6rem;
+			height: 6rem;
+			margin-bottom: 1rem;
+			span {
+				color: white;
+				font-size: 4.25rem;
+				position: absolute;
+				left: 50%;
+				top: 53%;
+				transform: translate(-50%, -50%);
+				font-weight: 700;
+			}
+		}
+		.step-label {
+			font-weight: 700;
+		}
+		.step-heading {
+			margin-bottom: auto;
+			font-weight: 500;
+		}
+		#part-number-old,
+		#part-number-new {
+			min-height: 150px;
+		}
+		.twitter-typeahead {
+			width: 100%;
+		}
+		.tt-menu {
+			width: 100%;
+			background-color: $brand-blue;
+			color: white;
+			box-shadow: 0px 3px 3px rgba(0,0,0,.1);
+			cursor: pointer;
+			border-radius: 0px 0px 4px 4px;
+			.tt-suggestion {
+				transition: all .05s linear;
+				padding: 4px;
+				&:hover {
+					background-color: $brand-orange;
+					color: white;
+				}
+			}
+		}
+		.curb {
+			display: flex;
+			width: 100%;
+			.info {
+				width: 40%;
+				text-align: left;
+				padding-right: 3rem;
+				flex-shrink: 0;
+			}
+			.diagrams {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.diagram {
+				width: 50%;
+				margin-left: auto;
+				border: 6px solid white;
+			}
+			h3,
+			h4 {
+				font-weight: 400;
+			}
+			h4 {
+				line-height: 1.2;
+			}
+			@media(max-width: 960px) {
+				.info {
+					width: 50%;
+				}
+				.diagram {
+					width: 100%;
+					.download {
+						font-size: 18px;
+					}
+				}
+			}
+			@media(max-width: $phablet) {
+				flex-wrap: wrap;
+				.info,
+				.diagram {
+					width: 100%;
+					padding: 0;
+					border: 0px;
+				}
+			}
+		}
+		.download {
+			display: block;
+			text-align: right;
+			margin-bottom: 3rem;
+			font-size: 16px;
+		}
+		.submit {
+			margin-left: auto;
+			position: relative;
+			text-align: right;
+			#search-curbs {
+				margin-left: auto;
+				@keyframes shakeout {
+					0% {
+						transform: translateX(0px);
+					}
+					33% {
+						transform: translateX(-12px);
+					}
+					66% {
+						transform: translateX(12px);
+					}
+					100% {
+						transform: translateX(0);
+					}
+				}
+			}
+			.error {
+				right: 0;
+				margin-left: auto;
+				text-align: right;
+				padding-top: 1rem;
+				opacity: 0;
+				visible: hidden;
+				transform: translateY(-12px);
+				transition: all .2s linear;
+				color: red;
+				display: block;
+			}
+			&.nope {
+				#search-curbs {	
+					animation: shakeout .3s linear;
+				}
+				.error {
+					transform: translateY(0px);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		
+	}
+	.form {
+		background-color: $brand-orange;
+		margin-top: 2rem;
+		.container {
+			position: relative;
+			overflow: hidden;
+			&.narrow {
+				max-width: 700px;
+			}
+		}
+		.triangle{
+			width: 100%;
+			position: absolute;
+			transform: translateY(-2px);
+			height: 50px;
+			&.over {
+				z-index: 1;
+			}
+			&.under {
+				z-index: 0;
+			}
+			svg {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.form-contents {
+			padding: 5em 0;
+			text-align: center;
+			h3 {
+				color: white;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 1.5em;
+			}
+			p {
+				color: white;
+				text-transform: uppercase;
+				color: white;
+				font-family: $font-family-headline;
+			}
+			li {
+				text-align: left;
+				color: white;
+				font-family: $font-family-headline;
+				text-transform: uppercase;
+				font-weight: 500;
+				letter-spacing: 1px;
+				font-size: .75em;
+			}
+			.purchase-order-number {
+				label {
+					text-align: center;
+					margin: 1em 0;
+					font-size: 2rem;
+					font-weight:  400;
+				}
+			}
+			.order-number {
+				background-color: rgba(0,0,0,.2);
+				padding: 1em;
+				margin-bottom: 1.5em;
+			}
+			.button {
+				background-color: white;
+				color: $link-color;
+				&:before {
+					background-color: $link-color;
+				}
+				&:hover {
+					color: white;
+					border-color: white;
+				}
+			}
+			.required-fields-label {
+				font-size: .9em;
+			}
+		}
+	}
+}

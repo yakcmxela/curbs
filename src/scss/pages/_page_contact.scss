@@ -1,0 +1,129 @@
+.page-template-page_contact {
+}
+
+.contact-columns{
+	clear: both;
+	margin-top: 6rem;
+	margin-bottom: 8rem;
+	overflow: hidden;
+	
+	@media (max-width : $phablet) {
+		margin-top: 4rem;
+	}
+	
+	.contact-details{
+		float: left;
+		width: 34.5%;
+
+		@media (max-width : $laptop) {
+			width: 40%;
+		}
+		
+		@media (max-width : $tablet) {
+			float: none;
+			width: 100%;
+		}
+		
+		p{
+			border-top: 1px solid $medium-grey;
+			color: $headline-color;
+			font-family: $font-family-headline;
+			font-size: 2.6rem;
+			font-weight: 500;
+			line-height: 1.2;
+			margin: 3.5rem 0 7rem 0;
+			padding: 1rem 0 0 0;
+			position: relative;
+			text-transform: uppercase;
+			
+			&:last-child{
+				margin-bottom: 0;
+				
+				@media (max-width : $tablet) {
+					margin-bottom: 5rem;
+				}
+			}
+			
+			@media (max-width : $laptop) {
+				font-size: 2rem;
+			}
+			@media (max-width : $phablet) {
+				margin-top: 3rem;
+			}
+			
+			.icon{
+				color: $medium-grey;
+				display: block;
+				font-size: 2.8rem;
+				height: 3rem;
+				line-height: 3rem;
+				position: absolute;
+				top: -3.5rem;
+				left: 0;
+				
+				@media (max-width : $phablet) {
+					font-size: 2rem;
+					height: 2.5rem;
+					line-height: 2.5rem;
+					top: -3rem;
+				}
+			}
+		}
+	}
+	
+	.address{
+		span{
+			display: block;
+		}
+		a{
+			font-size: 1.6rem;
+			margin-top: 1rem;
+			line-height: 1;
+			
+			@media (max-width : $laptop) {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	
+	.contact-form{
+		float: right;
+		width: 53.3%;
+
+		@media (max-width : $laptop) {
+			width: 50%;
+		}
+		
+		@media (max-width : $tablet) {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+
+.ginput_container_fileupload {
+	position: relative;
+	input {
+		width: 66% !important;
+		&:after {
+			content: 'SEARCH >';
+			color: $brand-orange;
+			position: absolute;
+			right: 24px;
+			font-family: $font-family-headline;
+			font-weight: 500;
+			cursor: pointer;
+		}
+	}
+	
+}
+
+.contact-map{
+	height: 41rem;
+	width: 100%;
+	
+	#gmap{
+		height: 100%;
+		width: 100%;
+	}
+}

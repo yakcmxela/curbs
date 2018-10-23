@@ -1,0 +1,176 @@
+body.login-modal-open{
+	overflow: hidden;
+	
+	.login-body-overlay{
+		background: #000;
+		display: block;
+		opacity: 0.5;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 999;
+	}
+}
+
+.login-body-overlay{
+	display: none;
+}
+
+#account-login-modal{
+	align-items: center;
+	background: $brand-orange;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+	color: #fff;
+	display: flex;
+	min-height: 71vh;
+	justify-content: center;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	transform: translateY(-100%);
+	transition: all 0.5s;
+	z-index: 1000;
+	
+	&.vis{
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	
+	.close-login{
+		background: none;
+		color: #fff;
+		display: block;
+		font-size: 2.5rem;
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 5vh;
+		right: 5%;
+	}
+	
+	.inner{
+		margin: 0;
+		max-width: 75rem;
+		padding: 10vh 0;
+		width: 85%;
+	}
+	
+	.login-brand{
+		display: block;
+		margin: 0 auto 3vh auto;
+		width: 19.3rem;
+		
+		@media (max-width : $phablet) {
+			width: 12rem;
+		}
+	}
+	
+	h4{
+		color: #fff;
+		margin: 0 0 5.4vh 0;
+		font-size: 2.6rem;
+		
+		@media (max-width : $phablet) {
+			font-size: 2.2rem;
+			margin-bottom: 5vh;
+		}
+	}
+	
+	form{
+		margin: 0 -1rem;
+		
+		p{
+			margin: 0;
+		}
+	}
+	
+	.login-username,
+	.login-password{
+		float: left;
+		padding: 0 1rem;
+		text-align: left;
+		width: 50%;
+		
+		@media (max-width : $phablet) {
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+	}
+	
+	.login-remember{
+		clear: both;
+		padding-top: 2.5vh;
+	}
+	
+	label{
+		font-family: $font-family-headline;
+		font-size: 1.4rem;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	
+	input{
+		background: rgba(#fff, 0.5);
+		color: $almost-black;
+		line-height: 3.8rem;
+		padding: 0 1rem;
+	}
+	
+	.button{
+		background: #fff;
+		border-radius: 1.9rem;
+		color: $brand-orange;
+		font-family: $font-family-headline;
+		font-size: 1.6rem;
+		font-weight: 600;
+		height: 3.8rem;
+		letter-spacing: 0.2rem;
+		line-height: 3.8rem;
+		margin: 4.5vh 0 0 0;
+		padding: 0;
+		width: 23rem;
+	}
+	
+	.login-fail{
+		display: none;
+	}
+	
+	&.error{
+		.login-fail{
+			color: #fff;
+			display: block;
+			font-family: $font-family-headline;
+			font-size: 2rem;
+			font-weight: 500;
+			margin: 1rem 0 0 0;
+			text-transform: uppercase;
+		}
+	}
+	
+	.request{
+		font-family: $font-family-headline;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin: 6vh 0 0 0;
+		text-transform: uppercase;
+		
+		a{
+			color: #fff;
+			text-decoration: underline;
+			
+			@media (max-width : $phablet) {
+				display: block;
+			}
+			
+			&:hover{
+				color: $almost-black;
+			}
+		}
+	}
+}

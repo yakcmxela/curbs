@@ -1,0 +1,278 @@
+{
+    "key": "group_5ad62bf514cdd",
+    "title": "Product Page",
+    "fields": [
+        {
+            "key": "field_5ad65a6f0da78",
+            "label": "Product Info",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ae23c4cd70fc",
+            "label": "Product Code",
+            "name": "product_code",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad630f266db0",
+            "label": "Product PDF",
+            "name": "product_pdf",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf"
+        },
+        {
+            "key": "field_5ad62bf9cd3a4",
+            "label": "Standard Features",
+            "name": "standard_features",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Standard Feature",
+            "sub_fields": [
+                {
+                    "key": "field_5ad62c02cd3a5",
+                    "label": "Feature",
+                    "name": "feature",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ad62c0bcd3a6",
+            "label": "Optional Features",
+            "name": "optional_features",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Optional Feature",
+            "sub_fields": [
+                {
+                    "key": "field_5ad62c15cd3a7",
+                    "label": "Feature",
+                    "name": "feature",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ad65a520da77",
+            "label": "Specs & Dimensions",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad89ab475029",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Select which fields to display in the product form.\r\n\r\nIn order to create a hideable form field:\r\n\r\n1. Add a form field and ensure that it has a class identifier unique to that of the other fields. Form classes can be found under the appearance tab of the form field. \r\n2. Add a checkbox value and label to either the Specifications or Dimensions custom fields in the Products Page field group. The checkbox value must be identical to that of the form class.\r\n\r\nFor example: \r\n\r\nACF  -- 'unit_width : Unit Width'\r\nForm field class -- 'unit_width'.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ad78c57be9b7",
+            "label": "Specifications",
+            "name": "specs",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "roof_slope": "Roof Slope",
+                "metal_building_manufacturer": "Metal Building Manufacturer",
+                "metal_building_panel_type": "Metal Building Panel Type",
+                "panel_centers": "Panel Centers",
+                "rtu_model_number": "RTU Model #",
+                "4_or_12": "4\" or 12\"",
+                "roof_slope_pitch": "Roof Slope\/Pitch",
+                "intake_or_exhaust": "Intake or Exhaust",
+                "roof_mounted": "Roof Mounted",
+                "roof_slab_mounted": "Roof Mounted or Slab Mounted",
+                "horizontal_supply_size": "Horizontal Supply Size or CFM",
+                "supply_location": "Supply Location",
+                "horizontal_return_size": "Horizontal Return Size or CFM",
+                "return_location": "Return Location",
+                "unit_model_number": "Unit Model #",
+                "unit_width": "Unit Width",
+                "unit_length": "Unit Length",
+                "unit_weight": "Unit Weight",
+                "punched_pan_or_baserail": "Punched Pan or Base Rail",
+                "existing_unit_model": "Existing Unit Model #",
+                "new_unit_model": "New Unit Model #",
+                "rtu_model_or_l_x_w": "RTU Model # or L\" x W\"",
+                "unit_operating_weight": "Unit Operating Weight",
+                "desired_deflection": "Desired Deflection",
+                "unit_base_rail_width": "Unit Base Rail Width",
+                "base_rail_mounting_depth": "Base Rail \"Mounting Depth\"",
+                "tags": "Tags",
+                "options": "Options",
+                "quantity": "Quantity"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5ad65a9e0da79",
+            "label": "Dimensions",
+            "name": "dimensions",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "a": "A",
+                "b": "B",
+                "c": "C",
+                "d": "D",
+                "e": "E",
+                "y": "Y",
+                "z": "Z",
+                "h": "H",
+                "h1": "H1",
+                "h2": "H2",
+                "l": "L",
+                "w": "W"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [
+                "off"
+            ],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "products"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1524797142
+}

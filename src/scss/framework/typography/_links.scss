@@ -1,0 +1,8 @@
+a {
+	text-decoration: underline;
+
+	nav &,
+	&.button {
+		text-decoration: none;
+	}
+}

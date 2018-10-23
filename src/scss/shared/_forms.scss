@@ -1,0 +1,189 @@
+
+form{
+	
+	label{
+		display: block;
+		font-family: $font-family-headline;
+		font-size: 1.4rem;
+		font-weight: 500;
+		line-height: 1;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+	}
+}
+
+.curbfinder{
+	label{
+		display: block;
+		margin: 2rem 0;
+	}
+}
+
+.gform_wrapper{
+	
+	.gform_title{
+	}
+	
+	.gfield{
+		margin-bottom: 2rem;
+	
+		label{
+			display: block;
+			font-family: $font-family-headline;
+			font-size: 1.4rem;
+			font-weight: 500;
+			line-height: 1;
+			margin-bottom: 0.5rem;
+			text-transform: uppercase;
+		}
+		
+		input,
+		select,
+		textarea{
+			background: $input-background;
+			border-radius: $input-border-radius;
+			display: block;
+			padding: 0.8rem 1rem;
+			width: 100%;
+		}
+		input,
+		select{
+			height: 4.5rem;
+		}
+		textarea{
+			height: 10rem;
+		}
+	}
+	
+	.ginput_container_checkbox,
+	.ginput_container_radio{
+		margin: 2rem 0;
+		
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		li{
+			display: inline-block;
+			margin-right: 2rem;
+		}
+		
+		input{
+			background: none;
+			display: inline-block;
+			margin: 0 0.5rem 0 0;
+			padding: 0;
+			width: auto;
+		}
+		
+		label{
+			display: inline-block;
+			font-family: $font-family-base;
+			font-size: 1.8rem;
+			font-weight: normal;
+			text-transform: none;
+		}
+		
+	}
+	
+	.login_address{
+		
+		> .gfield_label_before_complex{
+			display: none !important;
+		}
+	}
+	.ginput_container_address{
+		margin: 0 -1rem -2rem -1rem;
+		overflow: hidden;
+		
+		> span{
+			display: block;
+			margin-bottom: 2rem;
+			padding: 0 1rem;
+			
+			label{
+				//display: block;
+				//font-size: 1.2rem;
+				//margin-top: 0.5rem;
+			}
+		}
+		
+		.ginput_left{
+			float: left;
+			width: 50%;
+		}
+		.ginput_right{
+			float: left;
+			width: 50%;
+		}
+	}
+	
+	.single_check{
+		> label{
+			display: none;
+		}
+		
+		.ginput_container.ginput_container_checkbox{
+			margin: 0;
+		}
+		
+		input{
+			height: auto;
+		}
+	}
+
+	.gfield_description{
+		font-size: 1.8rem;
+		line-height: 1.3;
+		margin-top: 1rem;
+	}
+	
+	.gfield.required-note{
+		font-family: $font-family-base !important;
+		font-size: 1.6rem !important;
+		font-weight: normal !important;
+		text-transform: none !important;
+	}
+	
+	.gfield_error{
+		input{
+			border: 1px solid $form-error-color;
+		}
+	}
+	
+	.button{
+		display: block;
+		margin-top: 1rem;
+		width: 23rem;
+		
+		@media (max-width : $phablet) {
+			width: 100%;
+		}
+	}
+	
+	.validation_error{
+		color: $form-error-color;
+		margin-bottom: 2rem;
+	}
+	.validation_message{
+		color: $form-error-color;
+		margin-bottom: -1rem;
+	}
+}
+
+.gform_confirmation_message{
+}
+
+.page-template-page_curbfinder .form-contents{
+	label{
+		color: #fff;
+	}
+	input,
+	select,
+	textarea{
+		background: #fff !important;
+		color: $body-color;
+	}
+}

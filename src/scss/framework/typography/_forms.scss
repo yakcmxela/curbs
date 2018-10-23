@@ -1,0 +1,133 @@
+button,
+input[type="button"],
+input[type="submit"],
+select,
+option {
+	appearance: none;
+}
+
+label {
+	cursor: pointer;
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.button {
+	border: $input-border-width solid transparent;
+	display: inline-block;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	line-height: normal;
+	padding: $input-padding 3*$input-padding;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+textarea,
+select,
+select[multiple] {
+	background: $input-background;
+	border-color: $input-border-color;
+	border-radius: $input-border-radius;
+	border-style: solid;
+	border-width: $input-border-width;
+	box-shadow: none;
+	display: block;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: normal;
+	margin-bottom: 0;
+	padding: $input-padding;
+	padding-right: 2rem;
+	width: 100%;
+}
+
+.gform_fields {
+	@include clearfix;
+	display: block;
+	list-style: none;
+	margin-bottom: 0;
+	margin-left: -$form-element-spacing;
+	margin-right: -$form-element-spacing;
+	overflow: hidden;
+}
+.gfield {
+	display: block;
+	float: left;
+	margin-bottom: $form-element-spacing;
+	padding-left: $form-element-spacing;
+	padding-right: $form-element-spacing;
+	width: 100%;
+
+	@media (min-width: $phablet){
+		&.gf_left_half,
+		&.gf_right_half {
+			width: 50%;
+		}
+		&.gf_right_half + .gfield {
+			clear: left;
+		}
+	}
+	@media (min-width: $tablet){
+		&.gf_left_third,
+		&.gf_middle_third,
+		&.gf_right_third {
+			width: 33.33333333%;
+		}
+		&.gf_right_third + .gfield {
+			clear: left;
+		}
+	}
+}
+
+.ginput_container_select {
+	position: relative;
+
+	&:after {
+		content: '\f107';
+		font-family: 'Font Awesome 5 Pro';
+		pointer-events: none;
+		position: absolute;
+		right: 1rem;
+		top: 50%;
+		z-index: 1;
+		transform: translateY(-50%);
+	}
+}
+.gform_validation_container {
+	clip: rect(0,0,0,0);
+	float: none;
+	height: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 0;
+	z-index: -1;
+}
+
+.validation_error{
+	margin-bottom: 1rem;
+}
+
+.validation_error,
+.validation_message{
+	color: red;
+}

@@ -1,0 +1,124 @@
+.blog,
+.archive {
+
+}
+
+.blog-list{
+	margin-top: 7rem;
+	
+	@media (max-width : $phablet ) {
+		margin-top: 5rem;
+	}
+	
+	.hentry{
+		padding: 8rem 0 9.5rem 0;
+		
+		@media (max-width : $phablet ) {
+			padding: 5rem 0;
+		}
+		
+		&:nth-child(odd){
+			background: rgba($light-grey, 0.23);
+			
+			.container{
+				flex-direction: row-reverse;
+			}
+		}
+		
+		.container{
+			align-items: flex-start;
+			display: flex;
+			justify-content: space-between;
+			
+			@media (max-width : $phablet ) {
+				display: block;
+			}
+			
+			&:after{
+				display: none;
+			}
+		}
+		
+		figure{
+			width: 34.6%;
+			
+			@media (max-width : $phablet ) {
+				margin-bottom: 2rem;
+				width: 100%;
+			}
+			
+			.img{
+				background: no-repeat center center;
+				background-size: cover;
+				border-radius: 0.8rem;
+				display: block;
+				padding-bottom: 100%;
+				width: 100%;
+			}
+		}
+		
+		.hentry-content{
+			width: 60.5%;
+			
+			@media (max-width : $phablet ) {
+				width: 100%;
+			}
+		}
+			
+		h2{
+			margin: 0 0 1.5rem 0;
+
+			a{
+				color: $almost-black;
+			}
+		}
+		
+		.post-meta{
+			font-size: 0.9em;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-transform: capitalize;
+			
+			li{
+				display: inline-block;
+				
+				& + li{
+					&:before{
+						content: '|';
+						display: inline-block;
+						margin: 0 0.7rem 0 0.3rem;
+					}
+				}
+			}
+		}
+		
+		.button{
+			margin-top: 3rem;
+			width: 23rem;
+		}
+	}
+}
+
+.archive-nav{
+	font-family: $font-family-headline;
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin-top: 6.5rem;
+	text-align: center;
+	
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	li{
+		display: inline-block;
+		margin: 0 1rem;
+		
+		@media (max-width : $phablet) {
+			margin: 0 0.5rem;
+		}
+	}
+}

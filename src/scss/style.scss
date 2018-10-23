@@ -1,0 +1,34 @@
+/*!----------------------------------------------------------------------------------------------------
+ * Theme Name: Makespace Theme
+ * Description: Just another custom WordPress theme by the fine folks at Makespace!
+ * Author: Makespace
+ * Author URI: https://www.makespaceweb.com
+ * Version: 1.0.0
+ * Template: makespace-framework
+-----------------------------------------------------------------------------------------------------*/
+@import "framework/framework";
+
+
+/*-----------------------------------------------------------------------------------------------------
+  Shared Elements
+-----------------------------------------------------------------------------------------------------*/
+@import "shared/universals";
+@import "shared/header";
+@import "shared/footer";
+@import "shared/breadcrumbs";
+@import "shared/filter-dropdown";
+@import "shared/forms";
+@import "shared/login";
+
+
+/*-----------------------------------------------------------------------------------------------------
+  Pages
+-----------------------------------------------------------------------------------------------------*/
+@import "pages/front-page";
+@import "pages/page";
+@import "pages/page_contact";
+@import "pages/page_curbfinder";
+@import "pages/archive-products";
+@import "pages/single_product";
+@import "pages/blog";
+@import "pages/single";

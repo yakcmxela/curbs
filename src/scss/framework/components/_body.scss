@@ -1,0 +1,28 @@
+html {
+	box-sizing: border-box;
+	font-size: $font-size-base;
+
+	&.js {
+		@media(min-width: $fullsize){
+			font-size: #{100*$font-size-base/$design-width}vw;
+		}
+	}
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+* {
+	outline: none;
+}
+body {
+	font-family: $font-family-base;
+	font-weight: $font-weight-base;
+	font-size: 1rem;
+	line-height: $line-height-base;
+
+	&.nav-ocn.nav-open {
+		overflow: hidden;
+	}
+}

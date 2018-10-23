@@ -1,0 +1,76 @@
+
+.filter-container{
+	
+	.filter-label{
+	}
+
+	.filter-dropdown{
+		position:relative;
+		
+		.filter-display{
+			border:0 none;
+			cursor:pointer;
+			height: 100%;
+			padding: 0 3rem 0 1rem;
+			position:relative;
+			white-space: nowrap;
+			width:100%;
+			
+			&:before{
+				content:"\f107";
+				display:block;
+				font-family:FontAwesome;
+				font-size:1rem;
+				height: 100%;
+				margin:auto;
+				position: absolute;
+				top: 0;
+				right: 1rem;
+				bottom: 0;
+				text-align: left;
+				transform:rotate(0deg);
+			}
+		}
+		
+		ul{
+			display:none;
+			list-style:none;
+			margin:0;
+			min-width:100%;
+			padding:0;
+			position:absolute;
+			top:100%;
+			right:0;
+			text-align: left;
+			width: 100%;
+	
+			li{
+				margin:0;
+				padding:0;
+			}
+			
+			a{
+				display:block;
+				padding:0.5rem 1rem;
+				text-decoration: none;
+				transition:all 0.3s;
+				
+				&:hover{
+					background: rgba(0,0,0,0.1);
+				}
+			}
+		}
+		
+		&.active{
+			z-index:100;
+			
+			.filter-display:before{
+				transform:rotate(180deg);
+			}
+			ul{
+				box-shadow:0 3px 3px rgba(0,0,0,0.1);
+				display:block;
+			}
+		}
+	}
+}

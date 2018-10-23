@@ -1,0 +1,40 @@
+/*-----------------------------------------------------------------------------------------------------
+  Base Libraries
+-----------------------------------------------------------------------------------------------------*/
+@import "shared/variables";
+@import "./bower_components/normalize-scss/normalize.scss";
+@import "./bower_components/neat/core/neat";
+//@import "./bower_components/font-awesome/web-fonts-with-css/scss/fontawesome";
+//@import "./bower_components/font-awesome/scss/font-awesome";
+//@import "./bower_components/slick-carousel/slick/slick.scss";
+@import "./wp-content/themes/makespace-framework/includes/fontawesome-pro/web-fonts-with-css/scss/fontawesome";
+@import "./wp-content/themes/makespace-framework/includes/fontawesome-pro/web-fonts-with-css/scss/fa-brands";
+@import "./wp-content/themes/makespace-framework/includes/fontawesome-pro/web-fonts-with-css/scss/fa-light";
+@import "./wp-content/themes/makespace-framework/includes/fontawesome-pro/web-fonts-with-css/scss/fa-regular";
+@import "./wp-content/themes/makespace-framework/includes/fontawesome-pro/web-fonts-with-css/scss/fa-solid";
+@import "./node_modules/magnific-popup/src/css/main.scss";
+
+/*-----------------------------------------------------------------------------------------------------
+  Mixins
+-----------------------------------------------------------------------------------------------------*/
+@import "mixins/clearfix";
+
+/*-----------------------------------------------------------------------------------------------------
+  Typography
+-----------------------------------------------------------------------------------------------------*/
+@import "components/body";
+@import "components/container";
+@import "components/dashboard-link";
+@import "components/dropdown-nav";
+@import "components/ocn";
+@import "components/responsive-video";
+@import "components/images";
+//@import "components/footer";
+@import "components/makespace-logo";
+
+/*-----------------------------------------------------------------------------------------------------
+  Typography
+-----------------------------------------------------------------------------------------------------*/
+@import "typography/forms";
+@import "typography/links";
+@import "typography/type";

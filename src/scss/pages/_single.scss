@@ -1,0 +1,173 @@
+.single-post {
+
+	.hentry{
+		h1{
+			margin-bottom: 1.5rem;
+		}
+	}
+		
+	.post-meta{
+		font-family: $font-family-headline;
+		font-size: 1.4rem;
+		list-style: none;
+		margin: 0 0 3rem 0;
+		padding: 0;
+
+		li{
+			display: inline-block;
+
+			& + li{
+				&:before{
+					content: '|';
+					display: inline-block;
+					margin: 0 0.7rem 0 0.3rem;
+				}
+			}
+		}
+	}
+}
+
+.post-categories{
+	font-weight: 300;
+	margin: 4rem 0 3rem 0;
+	text-align: center;
+	
+	a{
+		display: inline-block;
+		font-family: $font-family-headline;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin: 0 0.5rem;
+		text-transform: uppercase;
+
+		&:before {
+			content: '|';
+			margin-right: 1rem;
+			color: $body-color;
+		}
+
+		&:first-of-type {
+			&:before {
+				display: none;
+			}
+		}
+		
+		&:hover{
+			color: $brand-blue;
+		}
+	}
+}
+
+.post-share{
+	
+}
+
+.addtoany_shortcode{
+	margin: 3rem 0 5.5rem;
+
+	.addtoany_list{
+		display: block;
+		text-align: center;
+
+		a{
+			background: $link-color !important;
+			border-radius: 50% !important;
+			display: inline-block;
+			margin: 0 0.5rem;
+			padding: 0;
+			line-height: 3.8rem;
+			width: 3.85rem !important;
+			height: 3.85rem !important;
+			text-align: center;
+			position: relative;
+			
+			&:hover{
+				background: $brand-blue !important;
+			}
+
+			& + a{
+				margin-left: 1rem;
+			}
+
+			> span{
+				background: none !important;
+				border-radius: 0!important;
+				opacity: 1 !important;
+				width: 2rem !important;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			svg{
+				path{
+					fill: #fff !important;
+				}
+			}
+		}
+	}
+}
+
+.single-nav{
+	background: rgba( $medium-grey, 0.5 );
+	color: #fff;
+	font-family: $font-family-headline;
+	font-size: 1.6rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	margin: 5.5rem 0 10rem;
+	padding: 5.4rem 0;
+	text-transform: uppercase;
+	
+	@media (max-width : $laptop - 1 ) {
+		letter-spacing: normal;
+	}
+	@media (max-width : $tablet - 1 ) {
+		letter-spacing: 0.2rem;
+		padding: 3rem 0;
+	}
+	
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		
+		li{
+			margin: 0;
+			min-height: 1px;
+			width: 32%;
+			
+			@media (max-width : $tablet - 1 ) {
+				display: block !important;
+				float: none !important;
+				margin: 1rem 0;
+				text-align: center !important;
+				width: 100%;
+			}
+		}
+	}
+	
+	a{
+		color: #fff;
+		
+		&:hover{
+			color: $link-color;
+		}
+	}
+	
+	.prev{
+		float: left;
+		text-align: left;
+	}
+	
+	.next{
+		float: right;
+		text-align: right;
+	}
+	
+	.all{
+		display: inline-block;
+	}
+}
